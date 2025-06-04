@@ -15,8 +15,9 @@ connectCloudinary();
 
 // ✅ Configure CORS for your deployed frontend
 app.use(cors({
-  origin: ['https://medi-link-admin01.vercel.app/'],
-  credentials: true
+  origin: '*', // Allows any origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
 }));
 
 // middleware
